@@ -40,6 +40,69 @@ namespace Calculator
 
                     break;
 
+                case "NineBtn":
+                    output += "9";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+
+                case "EightBtn":
+                    output += "8";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "SixthBtn":
+                    output += "6";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FithBtn":
+                    output += "5";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FourthBtn":
+                    output += "4";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "ThirdBtn":
+                    output += "3";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "SecondBtn":
+                    output += "2";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FirstBtn":
+                    output += "1";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "ZeroBtn":
+                    output += "0";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+
+
+
+
+
+
+
+
             }
         }
     }
