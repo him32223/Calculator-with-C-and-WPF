@@ -22,10 +22,12 @@ namespace Calculator
    
     public partial class MainWindow : Window
     {
-        String output = "";
+        string output = "";
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = this;
         }
 
         
