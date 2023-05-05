@@ -9,6 +9,12 @@
     Width="350"
     Height="450"
     mc:Ignorable="d">
+    <Window.Background>
+        <SolidColorBrush Opacity="30" Color="Transparent" />
+    </Window.Background>
+
+
+
     <Grid Margin="10">
 
         <!--  Here we will add row  -->
@@ -118,14 +124,14 @@
             VerticalAlignment="Bottom"
             FontSize="50"
             FontWeight="Bold"
-            Text="{Binding output}"
+            Text=""
             TextAlignment="Right" />
 
         <Button
             x:Name="EqualBtn"
             Grid.Row="4"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="EqualBtn_Click"
             Content="="
             FontSize="25"
             FontWeight="Bold" />
@@ -134,7 +140,7 @@
             x:Name="PlusBtn"
             Grid.Row="3"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="PlusBtn_Click"
             Content="+"
             FontSize="25"
             FontWeight="Bold" />
@@ -143,7 +149,7 @@
             x:Name="MinusBtn"
             Grid.Row="2"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="MinusBtn_Click"
             Content="-"
             FontSize="25"
             FontWeight="Bold" />
@@ -152,10 +158,20 @@
             x:Name="DivideBtn"
             Grid.Row="1"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="DivideBtn_Click"
             Content="%"
             FontSize="25"
             FontWeight="Bold" />
+
+        <Button
+            x:Name="ClearBtn"
+            Grid.Row="4"
+            Grid.Column="0"
+            Click="ClearBtn_Click"
+            Content="Clear"
+            FontSize="25"
+            FontWeight="Bold" />
+
 
     </Grid>
 

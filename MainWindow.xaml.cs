@@ -19,23 +19,31 @@ namespace Calculator
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-   
+
     public partial class MainWindow : Window
     {
+        double temp = 0;
+        string operation = "";
         string output = "";
         public MainWindow()
         {
             InitializeComponent();
 
+
             this.DataContext = this;
+            DivideBtn.Content = "\u00F7";
+            OutputTextBlock.Foreground = Brushes.White;
         }
 
-        
+
+
+
         //This show a message box when the button is click
         private void NumBtn_Click(object sender, RoutedEventArgs e)
         {
             String name = ((Button)sender).Name;
-            switch(name){
+            switch (name)
+            {
                 case "SevenBtn":
                     output += "7";
                     OutputTextBlock.Text = output;
@@ -107,5 +115,77 @@ namespace Calculator
 
             }
         }
+
+        private void MinusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (output != "")
+            {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Minus";
+            }
+        }
+
+        private void EqualBtn_Click(object sender, RoutedEventArgs e)
+        {
+            switch (operation)
+            {
+                case "Minus":
+                    double outputTemp = temp - double.Parse(output);
+                    output = outputTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
+
+                case "Plus":
+                    double plusTemp = temp + double.Parse(output);
+                    output = plusTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
+
+                case "Divide":
+                    double DivideTemp = temp / double.Parse(output);
+                    output = DivideTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
+            }
+
+
+        }
+
+        private void PlusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (output != "")
+            {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Plus";
+            }
+        }
+
+        private void DivideBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (output != "")
+            {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Divide";
+            }
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (output != "")
+            {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Clear";
+                OutputTextBlock.Text = output;
+            }
+
+    }
     }
 }
+    
+    
+
+
