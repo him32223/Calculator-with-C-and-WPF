@@ -18,19 +18,92 @@ namespace Calculator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+   
     public partial class MainWindow : Window
     {
+        String output = "";
         public MainWindow()
         {
             InitializeComponent();
         }
 
-
+        
         //This show a message box when the button is click
         private void NumBtn_Click(object sender, RoutedEventArgs e)
         {
             String name = ((Button)sender).Name;
-            MessageBox.Show(name);
+            switch(name){
+                case "SevenBtn":
+                    output += "7";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "NineBtn":
+                    output += "9";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+
+                case "EightBtn":
+                    output += "8";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "SixthBtn":
+                    output += "6";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FithBtn":
+                    output += "5";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FourthBtn":
+                    output += "4";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "ThirdBtn":
+                    output += "3";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "SecondBtn":
+                    output += "2";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "FirstBtn":
+                    output += "1";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+                case "ZeroBtn":
+                    output += "0";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+
+
+
+
+
+
+
+
+            }
         }
     }
 }

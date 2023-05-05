@@ -112,7 +112,7 @@
             FontWeight="Bold" />
         <!--  Here we will put the output  -->
         <TextBlock
-            x:Name="Output"
+            x:Name="OutputTextBlock"
             Grid.Row="0"
             Grid.ColumnSpan="4"
             VerticalAlignment="Bottom"
