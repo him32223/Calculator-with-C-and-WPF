@@ -1,0 +1,126 @@
+﻿<Window
+    x:Class="Calculator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Calculator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="350"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Margin="10">
+
+        <!--  Here we will add row  -->
+        <Grid.RowDefinitions>
+            <!--  This Is The Row for the Output  -->
+            <RowDefinition Height="100" />
+            <!--  This is the row for the numpad  -->
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
+            <!--  This row will take up the remaining available space  -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--  This is for the collumn  -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="SevenBtn"
+            Grid.Row="1"
+            Grid.Column="0"
+            Click="NumBtn_Click"
+            Content="7"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="EightBtn"
+            Grid.Row="1"
+            Grid.Column="1"
+            Click="NumBtn_Click"
+            Content="8"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="NineBtn"
+            Grid.Row="1"
+            Grid.Column="2"
+            Click="NumBtn_Click"
+            Content="9"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="SixthBtn"
+            Grid.Row="2"
+            Grid.Column="0"
+            Click="NumBtn_Click"
+            Content="6"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="FithBtn"
+            Grid.Row="2"
+            Grid.Column="1"
+            Click="NumBtn_Click"
+            Content="5"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="FourthBtn"
+            Grid.Row="2"
+            Grid.Column="2"
+            Click="NumBtn_Click"
+            Content="4"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="FirstBtn"
+            Grid.Row="3"
+            Grid.Column="0"
+            Click="NumBtn_Click"
+            Content="1"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="SecondBtn"
+            Grid.Row="3"
+            Grid.Column="1"
+            Click="NumBtn_Click"
+            Content="2"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="ThirdBtn"
+            Grid.Row="3"
+            Grid.Column="2"
+            Click="NumBtn_Click"
+            Content="3"
+            FontSize="25"
+            FontWeight="Bold" />
+        <Button
+            x:Name="ZeroBtn"
+            Grid.Row="4"
+            Grid.Column="1"
+            Click="NumBtn_Click"
+            Content="0"
+            FontSize="25"
+            FontWeight="Bold" />
+        <!--  Here we will put the output  -->
+        <TextBlock
+            x:Name="Output"
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            VerticalAlignment="Bottom"
+            FontSize="50"
+            FontWeight="Bold"
+            Text="Output"
+            TextAlignment="Right" />
+
+    </Grid>
+
+</Window>
