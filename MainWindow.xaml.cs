@@ -18,19 +18,29 @@ namespace Calculator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+   
     public partial class MainWindow : Window
     {
+        String output = "";
         public MainWindow()
         {
             InitializeComponent();
         }
 
-
+        
         //This show a message box when the button is click
         private void NumBtn_Click(object sender, RoutedEventArgs e)
         {
             String name = ((Button)sender).Name;
-            MessageBox.Show(name);
+            switch(name){
+                case "SevenBtn":
+                    output += "7";
+                    OutputTextBlock.Text = output;
+
+                    break;
+
+            }
         }
     }
 }
